@@ -10,3 +10,4 @@ BAM has to talk to the BF Webreports database, and it does so by creating querie
 Because BAM saves all of its returns into an iterable object, it parses a wide array of properties. This is possible using Single and Multiple property detection.
 ###SUDS
 BAM needs to talk with BF Webreports through XML, but it needs an agent to recieve and interpret the messages and information. SUDS is lightweight SOAP based web service client which does just that. Basically, it's an importable python library that lets the script talk to BigFix. 
+  Documentation can be found here: https://bitbucket.org/jurko/suds
