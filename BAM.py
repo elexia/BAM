@@ -171,7 +171,15 @@ class relevance_query:
         while (increment < len(filters)):
             # Adds OR and subtracts previous "AND" from string -- 
 
-            if (filters[increment] == "or"):
+            # If you find "multiple property" after a property, instead of "value of result", put "concatenation of value... "
+            filter_inc = filters[increment].lower()
+            if (filter_inc == "multiple property" or filter_inc == "multipleproperty" or filter_inc == "mp" or filter_inc == "multiple_property" ):
+                # To change the last occurrence, flip the query, find\replace using the flipped words once, then flip back
+                self.Query = self.Query[::-1].replace("value of result"[::-1], "concatenation of values of result"[::-1], 1)[::-1]
+                self.temp_filters = self.temp_filters[::-1].replace("value of result"[::-1], "concatenation of values of result"[::-1], 1)[::-1]
+                increment = increment + 1
+
+            elif (filters[increment] == "or"):
                 counter = 0
                 while ( counter != -1 ):
                     if (len(filters) - 1 <= increment + 3 ):
