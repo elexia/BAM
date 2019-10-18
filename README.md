@@ -1,5 +1,5 @@
 # BAM
-BAM, or the Bigfix Automation Module, and was created for Stanford University's Information Security office. You can use it to create queries and retrieve information from the Bigfix Webreports Database using an independent library called SUDS. 
+BAM, or the Bigfix Automation Module, was created for Stanford University's Information Security office. You can use it to create queries and retrieve information from the Bigfix Webreports Database using an independent library called SUDS. 
 Documentation can be found here: 
 https://asconfluence.stanford.edu/confluence/display/SECOPS/BigFix+Automation+Module
 
